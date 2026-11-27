@@ -1,0 +1,9 @@
+.banner {
+  color: red;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    transition: none !important;
+  }
+}
