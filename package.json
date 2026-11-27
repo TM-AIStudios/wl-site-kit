@@ -1,0 +1,59 @@
+{
+  "name": "@tm-aistudios/wl-site-kit",
+  "version": "0.1.0",
+  "description": "Generic verification, lint, and guard utilities for static sites",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.mjs"
+    },
+    "./css-important": {
+      "types": "./src/css-important.d.ts",
+      "import": "./src/css-important.mjs"
+    },
+    "./inline-style": {
+      "types": "./src/inline-style.d.ts",
+      "import": "./src/inline-style.mjs"
+    },
+    "./anti-slop-copy": {
+      "types": "./src/anti-slop-copy.d.ts",
+      "import": "./src/anti-slop-copy.mjs"
+    },
+    "./check-corrections": {
+      "types": "./src/check-corrections.d.ts",
+      "import": "./src/check-corrections.mjs"
+    }
+  },
+  "bin": {
+    "wl-lint-guards": "./bin/wl-lint-guards.mjs",
+    "wl-check-corrections": "./bin/wl-check-corrections.mjs",
+    "wl-site-verify": "./bin/wl-site-verify.mjs"
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "peerDependencies": {
+    "playwright": ">=1.40.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/**/*.test.mjs",
+    "test:consumer": "node test/consumer-smoke.mjs",
+    "ci": "npm run typecheck && npm test && npm run test:consumer"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

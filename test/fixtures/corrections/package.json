@@ -1,0 +1,6 @@
+{
+  "name": "fixture-corrections",
+  "scripts": {
+    "test": "node -e \"process.exit(0)\""
+  }
+}

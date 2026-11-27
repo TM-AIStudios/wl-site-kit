@@ -1,0 +1,1 @@
+We publish documented checklists and ship small, testable changes.
